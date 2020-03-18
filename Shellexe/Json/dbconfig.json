@@ -1,0 +1,48 @@
+{
+    "Basic": {
+        "IP": "a",
+        "port": "b",
+        "timeout": "c",
+        "databases": "d",
+        "save": "e",
+        "dir": "f",
+        "maxclients": "g",
+        "maxmemory": "h",
+        "appendonly": "j",
+        "appendfsync": "k"
+    },
+    "BasicEx": {},
+    "Oauth": [
+        {
+            "TYPE": "1",
+            "DATABASE": "1",
+            "USER": "3",
+            "ADDRESS": "45",
+            "METHOD": "55"
+        }
+    ],
+    "Rdundancy": {
+        "is_master": "1",
+        "port": "2",
+        "dir": "3",
+        "logfile": "4",
+        "master_appname": "5",
+        "slaver_num": "6",
+        "down_after_milliseconds": "7",
+        "parallel_syncs": "8",
+        "failover_timeout": "9"
+    },
+    "RdundancyEx": {},
+    "Cluster": {
+        "cluster_enabled": "AA",
+        "cluster_config_file": "BB",
+        "cluster_node_timeout": "CC",
+        "cluster_slave_validity_factor": "DD",
+        "cluster_migration_barrier": "EE",
+        "cluster_require_full_coverage": "FF"
+    },
+    "ClusterManger": {
+        "replicas_num": "",
+        "cluster_node-name": ""
+    }
+}

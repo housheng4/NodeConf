@@ -1,0 +1,10 @@
+{
+    "projectGroupName":"SA",
+    "projectName": "Redis_zhubei",
+    "GUID":"123456",
+    "dbType": "PostgreSQL",
+    "deploy":"primary_and_standby",
+    "type":"dbConfig",
+    "id":"7",
+    "modifyTime":"2020-03-12 16:18:59"
+}

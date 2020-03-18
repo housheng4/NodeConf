@@ -1,0 +1,16 @@
+{
+    "dbtype":"mongdb",
+    "dbpath": "dd",
+    "oplogSize": "d",
+    "replSet": "d",
+    "auth": false,
+    "user": "",
+    "pwd": "",
+    "master": -1,
+    "binds": [
+        {
+            "IP": "sa",
+            "Port": "as"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "Basic": {
+        "data_directory": "a",
+        "hba_file":"b",
+        "port":"c",
+        "max_connections":"d",
+        "shared_buffers":"e",
+        "temp_buffers":"f",
+        "work_mem":"g"
+    },
+    "BasicEx": {},
+    "Oauth": [
+        {
+            "TYPE": "s",
+            "DATABASE": "s",
+            "USER": "s",
+            "ADDRESS": "s",
+            "METHOD": "s"
+        },
+        {
+            "TYPE": "z",
+            "DATABASE": "z",
+            "USER": "z",
+            "ADDRESS": "z",
+            "METHOD": "z"
+        }
+    ],
+    "Rdundancy": {
+        "wal_level": "1",
+        "max_wal_senders": "2",
+        "wal_keep_segments": "3",
+        "wal_sender_timeout": "4",
+        "hot_standby": "5",
+        "primary_conninfo": "6",
+        "recovery_target_timeline": "7",
+        "max_standby_streaming_delay": "8",
+        "wal_receiver_status_interval": "9",
+        "hot_standby_feedback": "10"
+    },
+    "RdundancyEx": {}
+}
