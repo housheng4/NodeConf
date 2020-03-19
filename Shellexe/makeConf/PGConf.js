@@ -72,7 +72,7 @@ PGConf.resultConf = function () {
                         BasicConf = BasicConf.replace(reg, "\n" + RdundancyKeyList[i] + " = " + JsonConf.Rdundancy[RKLi])
                     }
 
-                    writeFileRecursive("./newConf/PostgreSQL/PGsentinel.conf", BasicConf, (err) => {
+                    writeFileRecursive("../newConf/PostgreSQL/PGsentinel.conf", BasicConf, (err) => {
                         if (err) {
                             console.log(err)
                             return
@@ -93,7 +93,7 @@ PGConf.resultConf = function () {
                         let regB = new RegExp("\n#recovery_target_timeline", "g")
                         recoveryConf = recoveryConf.replace(regB, "\n" + "recovery_target_timeline = " + JsonConf.Rdundancy.recovery_target_timeline)
 
-                        writeFileRecursive("./newConf/PostgreSQL/recover.conf.sample", recoveryConf, (err) => {
+                        writeFileRecursive("../newConf/PostgreSQL/recover.conf.sample", recoveryConf, (err) => {
                             console.log("recovery写入成功" || err)
                         })
 
@@ -104,7 +104,7 @@ PGConf.resultConf = function () {
                 })
             }
             else {
-                writeFileRecursive("./newConf/PostgreSQL/Basic.conf", BasicConf, (err) => {
+                writeFileRecursive("../newConf/PostgreSQL/Basic.conf", BasicConf, (err) => {
                     if (err) {
                         console.log(err)
                         return

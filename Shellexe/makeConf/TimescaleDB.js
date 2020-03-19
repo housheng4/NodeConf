@@ -74,7 +74,7 @@ TimescaleDBConf.resultConf = function () {
                         BasicConf = BasicConf.replace(reg, "\n" + RdundancyKeyList[i] + " = " + JsonConf.Rdundancy[RKLi])
                     }
 
-                    writeFileRecursive("./newConf/Timescaledb/TimescaledbSentinel.conf", BasicConf, (err) => {
+                    writeFileRecursive("../newConf/Timescaledb/TimescaledbSentinel.conf", BasicConf, (err) => {
                         if (err) {
                             console.log(err)
                             return
@@ -95,18 +95,15 @@ TimescaleDBConf.resultConf = function () {
                         let regB = new RegExp("\n#recovery_target_timeline", "g")
                         recoveryConf = recoveryConf.replace(regB, "\n" + "recovery_target_timeline = " + JsonConf.Rdundancy.recovery_target_timeline)
 
-                        writeFileRecursive("./newConf/PostgreSQL/recover.conf.sample", recoveryConf, (err) => {
+                        writeFileRecursive("../newConf/Timescaledb/recover.conf.sample", recoveryConf, (err) => {
                             console.log("PG-recovery写入成功" || err)
                         })
 
                     })
-
-
-
                 })
             }
             else {
-                writeFileRecursive("./newConf/Timescale/Basic.conf", BasicConf, (err) => {
+                writeFileRecursive("../newConf/Timescaledb/Basic.conf", BasicConf, (err) => {
                     if (err) {
                         console.log(err)
                         return

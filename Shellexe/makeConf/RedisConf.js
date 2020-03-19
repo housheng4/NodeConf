@@ -78,7 +78,7 @@ RedisConf.resultConf = () => {
 
                 ClusterConf = ClusterConf.replace(regF, "\ncluster-require-full-coverage " + JsonConf.Cluster.cluster_require_full_coverage)
 
-                writeFileRecursive("./newConf/Redis/cluster.conf", ClusterConf, (err) => {
+                writeFileRecursive("../newConf/Redis/cluster.conf", ClusterConf, (err) => {
                     if (err) {
                         console.log(err)
                         return
@@ -86,7 +86,7 @@ RedisConf.resultConf = () => {
                     console.log("写入Cluster配置")
                 })
             } else {
-                writeFileRecursive("./newConf/Redis/Basic.conf", BasicConf, (err) => {
+                writeFileRecursive("../newConf/Redis/Basic.conf", BasicConf, (err) => {
                     if (err) {
                         console.log(err)
                         return
@@ -139,7 +139,7 @@ RedisConf.resultConf = () => {
                 let regD = new RegExp("\nsentinel failover-timeout", "g");
                 sentinelConf = sentinelConf.replace(regD, "\nsentinel failover-timeout " + JsonConf.Rdundancy.failover_timeout)
 
-                writeFileRecursive("./newConf/Redis/sentinel.conf", sentinelConf, (err) => {
+                writeFileRecursive("../newConf/Redis/sentinel.conf", sentinelConf, (err) => {
                     if (err) {
                         console.log(err)
                         return

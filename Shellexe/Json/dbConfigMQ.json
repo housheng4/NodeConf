@@ -1,0 +1,19 @@
+{
+    "Node":{
+        "node.max_clients": 1024000,
+        "node.process_limit":2048000,
+        "node.max_ports":1024000,
+        "node.proto_dist":"inet_tcp"
+    },
+    "Zones":{
+        "zone.external.force_shutdown_policy": "100000|800M",
+        "zone.external.max_inflight":1024,
+        "zone.external.max_awaiting_rel":102400,
+        "zone.external.max_mqueue_len":102400,
+        "zone.external.mqueue_store_qos0":false
+    },
+    "Listeners":{
+        "listener.tcp.external.max_conn_rate": 1024,
+        "listener.tcp.external.nodelay":true
+    }
+}

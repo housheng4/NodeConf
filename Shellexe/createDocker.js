@@ -18,7 +18,12 @@ function createContainer(port, tcpPort) {
                 ]
             }
         }
+    },function (err,container) {
+        container.start(function (err,data) {
+            console.log(err||data)
+        })
     })
+
 }
 
 createContainer("8800","80/TCP");
