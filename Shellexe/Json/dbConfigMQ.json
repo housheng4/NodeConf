@@ -1,19 +1,21 @@
+
 {
-    "Node":{
-        "node.max_clients": 1024000,
-        "node.process_limit":2048000,
-        "node.max_ports":1024000,
-        "node.proto_dist":"inet_tcp"
+    "Cluster":{
+        "process_limit":"b",
+        "max_ports":"c",
+        "proto_dist":"d",
+        "force_shutdown_policy":"e",
+        "max_inflight":"f",
+        "max_mqueue_len":"g",
+        "mqueue_store_qos0":"h",
+        "max_conn_rate":"i",
+        "nodelay":"j"
     },
-    "Zones":{
-        "zone.external.force_shutdown_policy": "100000|800M",
-        "zone.external.max_inflight":1024,
-        "zone.external.max_awaiting_rel":102400,
-        "zone.external.max_mqueue_len":102400,
-        "zone.external.mqueue_store_qos0":false
-    },
-    "Listeners":{
-        "listener.tcp.external.max_conn_rate": 1024,
-        "listener.tcp.external.nodelay":true
+    "Oauth":{
+        "TYPE": "1",
+        "DATABASE": "1",
+        "USER": "3",
+        "ADDRESS": "45",
+        "METHOD": "55"
     }
 }

@@ -2,7 +2,7 @@
 ## Node Max Clients Size.
 ## @@最大客户端数，没有效果
 ## Value: String
-node.max_clients = 1024000
+<!-- node.max_clients = 1024000 -->
 
 ## Value: Number [1024-134217727]
 ##  @@erlang的进程数,如果超过指定，程序将直接奔溃
@@ -58,4 +58,25 @@ listener.tcp.external.backlog = 1024
 ## @@tcp数据包接收后，直接发送，不等待缓冲区满的在发送，提高消息的及时性
 ## Value: true | false
 listener.tcp.external.nodelay = true
+}
+
+
+{
+    "Node":{
+        "node.max_clients": 1024000,
+        "node.process_limit":2048000,
+        "node.max_ports":1024000,
+        "node.proto_dist":"inet_tcp"
+    },
+    "Zones":{
+        "zone.external.force_shutdown_policy": "100000|800M",
+        "zone.external.max_inflight":1024,
+        "zone.external.max_awaiting_rel":102400,
+        "zone.external.max_mqueue_len":102400,
+        "zone.external.mqueue_store_qos0":false
+    },
+    "Listeners":{
+        "listener.tcp.external.max_conn_rate": 1024,
+        "listener.tcp.external.nodelay":true
+    }
 }

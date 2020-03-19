@@ -2,7 +2,7 @@
     "projectGroupName":"SA",
     "projectName": "Redis_zhubei",
     "GUID":"123456",
-    "dbType": "PostgreSQL",
+    "dbType": "Redis",
     "deploy":"primary_and_standby",
     "type":"dbConfig",
     "id":"7",

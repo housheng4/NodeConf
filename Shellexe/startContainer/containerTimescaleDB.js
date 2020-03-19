@@ -1,9 +1,8 @@
 var Docker = require('dockerode')
-
+var TimescaleDBContainer = {}
 var docker = new Docker({ host: '127.0.0.1', port: 3000 })
-
-function createContainer(port, tcpPort) {
-    var s = docker.createContainer({
+TimescaleDBContainer = function (port, tcpPort) {
+    docker.createContainer({
         Image: '',//镜像名字
         Cmd: [],//命令
         name: '',//容器名字
@@ -12,11 +11,11 @@ function createContainer(port, tcpPort) {
         },
         HostConfig: {
             Binds: [],
-            PortBindings: {
+/*             PortBindings: {
                 [tcpPort]: [
                     { "HostPort": port }
                 ]
-            }
+            } */
         }
     },function (err,container) {
         container.start(function (err,data) {
@@ -26,4 +25,5 @@ function createContainer(port, tcpPort) {
 
 }
 
-createContainer("8800","80/TCP");
+// RdisContainer("8800","80/TCP");
+module.exports = TimescaleDBContainer;
