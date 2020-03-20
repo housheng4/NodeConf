@@ -1,6 +1,6 @@
 var fs = require('fs')
 var makeConf = require("./makeConf")
-var startContainer = requier("./startContainer")
+var startContainer = require("./startContainer")
 fs.readFile("./Json/project.json", (err, data) => {
     if (err) {
         console.log("Json数据错误")

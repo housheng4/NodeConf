@@ -1,7 +1,7 @@
 var Docker = require('dockerode')
 var RedisContainer = {}
 var docker = new Docker({ host: '127.0.0.1', port: 3000 })
-RedisContainer = function (port, tcpPort) {
+RedisContainer.RedisContainer = function (port, tcpPort) {
     docker.createContainer({
         Image: '',//镜像名字
         Cmd: [],//命令

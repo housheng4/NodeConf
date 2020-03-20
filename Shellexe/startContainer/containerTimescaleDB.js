@@ -1,7 +1,7 @@
 var Docker = require('dockerode')
 var TimescaleDBContainer = {}
 var docker = new Docker({ host: '127.0.0.1', port: 3000 })
-TimescaleDBContainer = function (port, tcpPort) {
+TimescaleDBContainer.TimescaleDBContainer = function (port, tcpPort) {
     docker.createContainer({
         Image: '',//镜像名字
         Cmd: [],//命令
